@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>HUAT - Band Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HUAT - Band Website">
+  <meta name="name" content="HUAT Band">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!--bootstrap CSS-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" type="text/css">
+  
+  <!--Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" rel="stylesheet" type="text/css">
+
+  <link href='https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Saira+Stencil+One&display=swap' rel="stylesheet" type="text/css">
+  
+  <!-- favicon -->
+  <link rel="icon" href="logo/final-logo-huat-blue-1920x1080.png" type="image/png">
+  <link rel="shortcut icon" href="logo/final-logo-huat-blue-1920x1080.png" type="image/png">
+  
+  <style>
+    :root {
+      --huat_blue: rgb(56, 98, 159);
+    }
+  body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #777;
+    /* background: url('attachments/images/Huat-weidaganga-cover-2.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; */
+    overflow-x: hidden !important;
+  }
+  body {
+  margin: 0;
+  padding: 0;
+  /* No background here */
+  position: relative;
+  }
+  body::before {
+  content: "";
+  position: fixed;
+  top: 0; 
+  left: 0; 
+  width: 100%;
+  height: 100%;
+  /* background: url('attachments/images/Huat-weidaganga-cover-2.jpeg') no-repeat center center / cover; */
+  z-index: -1; /* Make sure it's behind everything */
+  }
+  * {
+  box-sizing: border-box;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  .container, .row, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  h3, h4 {
+    font: 400 15px/1.8 "Saira Stencil One", sans-serif;
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;      
+    font-size: 20px;
+    color: white;
+  }
+  section {
+    height: 100vh; /* Full viewport height */
+  }
+  @media (max-width: 768px) {
+    section {
+      height: auto; /* Auto height for mobile devices */
+      padding: 20px 0; /* Add some padding for better spacing */
+    }
+  }
+  .section {
+  padding-top: 60px; /* Adjust the value as needed */
+  }
+
+  @media (max-width: 768px) {
+    .content-section {
+      padding-top: 60px; /* Adjust the value for mobile devices */
+    }
+  }
+  h2 {
+    font: 400 15px/1.8 "Saira Stencil One", sans-serif;
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;      
+    font-size: 40px;
+    color: white;
+  }
+  .container {
+    padding: 80px 120px;
+    max-width: 100%;
+  }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+    width: 100%;
+    margin: auto;
+  }
+  @media (min-width: 992px) {
+    .carousel-inner img {
+      width: 35%; /* Adjust the value as needed */
+      margin: auto;
+    }
+  }
+  .carousel-caption h3 {
+    color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .carousel-indicators li {
+      border: none;
+  }
+
+  /* body::before {
+    content: "";
+    background: url('attachments/images/Huat-weidaganga-cover-2.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+  } */
+
+  .bg-1 {
+    /* background: #2d2d30; */
+    background: var(--huat_blue);
+    /* background: url('attachments/images/Huat-weidaganga-cover-2.jpeg') no-repeat center center fixed; */
+    color: #bdbdbd;
+  }
+  @media (max-width: 600px) {
+      .bg-1 {
+        /* padding: 20px 0; */
+        /* background: url('attachments/images/Huat-weidaganga-cover-3.jpeg') no-repeat center center scroll; */
+      }
+      /* body {
+        background-attachment: scroll;
+        background: repeat;
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      } */
+    }
+  .bg-1 h3 {
+    color: #fff;
+  }
+  .bg-1 h2 {
+    color: #fff;
+  }
+  .bg-1 h1 {
+    color: #fff;
+  }
+  h2 {
+    color: #fff;
+  }
+  .bg-1 h2:hover {
+    color: #f4511e;
+  }
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail p {
+    margin-top: 15px;
+    color: #555;
+  }
+  .btn {
+    padding: 10px 20px;
+    /* background-color: #333; */
+    /* background-color: var(--huat_blue); */
+    background-color: chocolate;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+    text-decoration: none;
+  }
+  .btn:hover, .btn:focus {
+    /* border: 1px solid #333;
+    background-color: #fff; */
+    /* color: #000; */
+    /* color: var(--huat_blue); */
+
+    /* background-color: chocolate; */
+    background-color: white;
+    border-color: transparent;
+    /* color: chocolate; */
+    /* color: white; */
+    color: chocolate;
+    text-decoration: none;
+  }
+  .modal .btn {
+    min-width: 200px;
+    margin-bottom: 10px;
+  }
+  .modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-header, .modal-body {
+    padding: 40px 50px;
+  }
+  .nav-tabs li a {
+    color: #777;
+  }
+  #googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }  
+  .navbar {
+    /* font-family: Montserrat, sans-serif; */
+    font-family: "Saira Stencil One", sans-serif;
+    /* margin-bottom: 0; */
+    /* background-color: #2d2d30; */
+    padding: 10px 15px 10px 10px;
+    /* background-color: transparent; */
+    background-color: #00000075;
+    border: 0;
+    /* font-size: 11px !important; */
+    font-size: 25px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+    /* margin-top: 10px; */
+  }
+  .navbar-brand {
+    /* font-size: 25px;
+    padding-top: 18px; */
+    /* content: url('attachments/logo/HUAT-Logo-W.png'); */
+    margin-top: -18px;
+  }
+  .navbar-brand:hover {
+    filter: invert(61%) sepia(100%) saturate(1000%) hue-rotate(0deg) brightness(120%) contrast(90%);
+  }
+  .navbar li a, .navbar { 
+    /* color: #d5d5d5 !important; */
+    margin-top: 0;
+    color: white !important;
+  }
+  .navbar-nav li a:hover {
+    color: /*var(--huat_blue)*/ chocolate !important;
+  }
+  .navbar-nav li.active a {
+    /* color: #fff !important; */
+    color: chocolate !important;
+    /* background-color: #29292c !important; */
+    background-color: transparent !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+  .open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+    color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+    background-color: #bdbdbd !important;
+  }
+  footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+    width: 100%;
+    font: 400 15px/1.8 Lato, sans-serif;
+  }
+  footer a {
+    color: #f5f5f5;
+  }
+  footer a:hover {
+    color: chocolate;
+    text-decoration: none;
+  }  
+  .form-control {
+    border-radius: 0;
+  }
+  textarea {
+    resize: none;
+  }
+  .social-list a {
+    color: white;
+  }
+  .social-list a:hover {
+    color: /*var(--huat_blue)*/ chocolate;
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage"><img src="/attachments/logo/HUAT-Logo-W.png" alt="logo" style="height: 60px; padding: 0px 20px 0px 0px;"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <!-- <li><a href="#myPage">HOME</a></li> -->
+        <!-- <li><a href="#band">BAND</a></li> -->
+        <li><a href="#tour">TERMINE</a></li>
+        <li><a href="#merch">MERCH</a></li>
+        <li><a href="#videos">VIDEOS</a></li>
+        <li><a href="#press">PRESSE</a></li>
+        <li><a href="#downloads">DOWNLOADS</a></li>
+        <li><a href="#contact">KONTAKT</a></li>
+        <li><a href="documents/impressum.html">IMPRESSUM</a></li>
+        <!-- <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/documents/impressum.html">IMPRESSUM</a></li> 
+          </ul>
+        </li> -->
+        <!-- <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li> -->
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Container (The Band Section) -->
+<div id="myPage" class="bg-1 section">
+  <div class="container">
+    <br><br><br><br>
+    <img class="img-logo center-block" alt="logo" src="attachments/logo/HUAT-Logo-W.png"/>
+    <br>
+    <!-- <div class="row"> -->
+    <!-- <br> -->
+    <!-- <div class="row text-center">
+      <div class="col-sm-12 text-center">
+        <ul class="social-list list-inline text-center">
+          <li>
+            <h2>
+              <a href="https://open.spotify.com/intl-de/artist/6JnHFZYXW3a6QHm4a5Xnk1?si=ozsyvkhATpWXegPCHcEvbg" target="_blank"><i class="fa fa-spotify"></i></a>
+            </h2>
+          </li>
+          <li>
+            <h2>
+              <a href="https://www.instagram.com/huatband?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fa fa-instagram"></i></a>
+            </h2>
+          </li>
+          <li>
+            <h2>
+              <a href="https://www.youtube.com/channel/UCXhmD7YL2xnOCEdgxNVuGDw" target="_blank"><i class="fa fa-youtube"></i></a>
+            </h2>
+          </li>
+          <li>
+            <h2>
+            <a href="https://www.facebook.com/huatband/" target="_blank"><i class="fa fa-facebook"></i></a>
+            </h2>
+          </li>
+        </ul>
+      </div>
+    </div> -->
+  </div>
+  <br>
+</div>
+
+<!-- Container (TOUR Section) -->
+<div id="tour" class="bg-1 section">
+  <div class="container">
+    <h3 class="text-center">TERMINE</h3>
+    <p class="text-center">Schaut's vorbei!</p>
+    <!-- <ul class="list-group">
+       <li class="list-group-item">7.März 2025 Feldbach: Glam</li>
+       <li class="list-group-item">12.April 2025 Wien: Flex</li>
+       <li class="list-group-item">17.April 2025 Graz: Musichouse</li>
+    </ul> -->
+    
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="https://scontent-vie1-1.xx.fbcdn.net/v/t1.6435-9/205603889_318786739945910_6001979828901845899_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=ybLOYi8qQywQ7kNvgEDJ9b6&_nc_oc=AdgGpAdggF7hfGkPI1SWtCYGllJhC43e8czjPrLChuN8c-2_SPTgKo731FnepjP8ErGSXCQ3PXXlQqJqqPV3lGQw&_nc_zt=23&_nc_ht=scontent-vie1-1.xx&_nc_gid=A40ieErpOvsZmXiSIRVJlmc&oh=00_AYCTPJ0VrmCfmNRnVV3FWyfP_22BY5EKVbug13kFobEYRw&oe=67D044C0" alt="Glam" width="400" height="300">
+          <p><strong>Feldbach</strong></p>
+          <p>7.März 2025</p>
+          <!-- <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button> -->
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Flex_nacht_DRI.jpg" alt="Flex" width="400" height="300">
+          <p><strong>Wien</strong></p>
+          <p>12.April 2025</p>
+          <!-- <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button> -->
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <!-- <img src="https://scontent-vie1-1.xx.fbcdn.net/v/t39.30808-6/432127513_940910438035663_4160544823623784674_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=E8vBti_rN7cQ7kNvgGrqYUx&_nc_oc=Adg5_PLSWbUrS2me-8fAvjBu5LRglT6HvLn0z-857MCEhuGIMd4YH6ND6Z6J6GA_F1-3nOzswoYrWNxIihd2PdXo&_nc_zt=23&_nc_ht=scontent-vie1-1.xx&_nc_gid=AIiwxDrfqhcjeXVLeAOn16m&oh=00_AYCEOdRs7n15Jbop68eQ71aUb9F4_Wst5eYoLNECdlOnSQ&oe=67AEC3DB" alt="Musichouse" width="400" height="300"> -->
+          <img src="https://i0.wp.com/wakmusic.at/wp-content/uploads/2022/03/cropped-wak-logo.png?fit=371%2C135&quality=80&ssl=1" alt="Flex" width="400" height="300">
+          <p><strong>Graz</strong></p>
+          <p>17.April 2025</p>
+          <!-- <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button> -->
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <p class="text-center">Wart's dabei?</p>
+    <br>
+
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="https://scontent-vie1-1.xx.fbcdn.net/v/t39.30808-6/418845879_346135661540078_5075849901077509141_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=qW2o7PfIVawQ7kNvgGLXNF0&_nc_oc=Adiz8RQXcTnyMAC0n6IsGH1UfIpp_UD12wGdI8JYRxNJ1CsD5nZqMLX06lBgOoKtB0MtKKQixaZEZycozmy3nKo5&_nc_zt=23&_nc_ht=scontent-vie1-1.xx&_nc_gid=A14lVYBo3UiUfWWUCYAuqWb&oh=00_AYBKUewoxcrch5dCIQBKBtraUoupOdGKnVJjoi83xAmsmQ&oe=67B18494" alt="FerdinandReloaded" width="400" height="300">
+          <p><strong>Karlsdorf</strong></p>
+          <p>23.November 2024</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="https://i0.wp.com/wakmusic.at/wp-content/uploads/2022/03/cropped-wak-logo.png?fit=371%2C135&quality=80&ssl=1" alt="Flex" width="400" height="300">
+          <p><strong>Graz</strong></p>
+          <p>19.Oktober 2024</p>
+        </div>
+      </div>
+      <!-- <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="https://scontent-vie1-1.xx.fbcdn.net/v/t39.30808-6/432127513_940910438035663_4160544823623784674_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=E8vBti_rN7cQ7kNvgGrqYUx&_nc_oc=Adg5_PLSWbUrS2me-8fAvjBu5LRglT6HvLn0z-857MCEhuGIMd4YH6ND6Z6J6GA_F1-3nOzswoYrWNxIihd2PdXo&_nc_zt=23&_nc_ht=scontent-vie1-1.xx&_nc_gid=AIiwxDrfqhcjeXVLeAOn16m&oh=00_AYCEOdRs7n15Jbop68eQ71aUb9F4_Wst5eYoLNECdlOnSQ&oe=67AEC3DB" alt="Musichouse" width="400" height="300">
+          <p><strong>Graz</strong></p>
+          <p>17.April 2025</p>
+        </div>
+      </div> -->
+    </div>
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Tickets</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Tickets, $23 per person</label>
+              <input type="number" class="form-control" id="psw" placeholder="How many?">
+            </div>
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Send To</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+              <button type="submit" class="btn btn-block">Pay 
+                <span class="glyphicon glyphicon-ok"></span>
+              </button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+          </button>
+          <p>Need <a href="#">help?</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div id="merch" class="carousel slide" data-ride="carousel"> -->
+  <div id="merch" class="bg-1 section container">
+    <h3 class="text-center">MERCH</h3>
+    <p class="text-center">Kauft's a Leiberl!</p>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="attachments/images/huat-shirt-mockup.jpeg" alt="shirts" width="auto" height="auto">
+          <!-- <div class="carousel-caption">
+            <h3>New York</h3>
+            <p>The atmosphere in New York is lorem ipsum.</p>
+          </div>       -->
+        </div>
+
+        <div class="item">
+          <img src="attachments/images/haut-shirt-woman-back.jpeg" alt="women shirts" width="auto" height="auto">
+          <!-- <div class="carousel-caption">
+            <h3>Chicago</h3>
+            <p>Thank you, Chicago - A night we won't forget.</p>
+          </div>       -->
+        </div>
+      
+        <div class="item">
+          <img src="attachments/images/huat-shirt-man-front.jpeg" alt="men shirts" width="auto" height="auto">
+          <!-- <div class="carousel-caption">
+            <h3>LA</h3>
+            <p>Even though the traffic was a mess, we had the best time playing at Venice Beach!</p>
+          </div>       -->
+        </div>
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" style="background:transparent !important">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" style="background:transparent !important">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <br>
+    
+    <div class="row">
+      <div class="col-xs-12 center-block text-center">
+        <a href="https://wakmusic.at/bandshop/huat">
+        <button type="button" class="btn btn-lg">Zum Shop</button>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+<div id="videos" class="bg-1 section">
+  <h3 class="text-center">VIDEOS</h3>
+  <p class="text-center">Musikvideos und Mitschnitte vergangener Auftritte</p>
+  <div class="row text-center">
+    <div class="col-sm-4 text-center" style="margin-bottom: 20px;">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ttIJsOm0KyY?si=h7wksNlq8jZceDYj" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="col-sm-4 text-center" style="margin-bottom: 20px;">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Hm3OWQ7eCis?si=-6gE4ZeDbBHxcLdk" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="col-sm-4 text-center" style="margin-bottom: 20px;">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/A9BPNnEDIQk?si=-v2wjl_GtkHcFWWf" allowfullscreen></iframe>
+      </div>
+    </div>
+    <!-- <div class="col-sm-4 text-center" style="margin-bottom: 20px;">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/E0sLSKVcnvA?si=DxkXJ8ZMtTl9UJMg" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="col-sm-4 text-center" style="margin-bottom: 20px;">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/QjXprjt_jvQ?si=QVe3BzSdxnRmdtOb" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="col-sm-4 text-center" style="margin-bottom: 20px;">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/FJSZzVEhzLQ?si=g_wZhHh-FwyMkZkU" allowfullscreen></iframe>
+      </div>
+    </div> -->
+  </div>
+</div>
+
+<!-- Press - TODO: embed press articles -->
+<div id="press" class="bg-1 section">
+  <h3 class="text-center">PRESSE</h3>
+  <p class="text-center"><em>Das schreiben's über uns.</em></p>
+
+  <div class="row">
+    <div class="col-sm-6 text-center">
+      <div class="thumbnail">
+        <!-- <img src="attachments/images/IMG_7850.jpg" alt="Volume" width="400" height="300"> -->
+        <p><strong>Volume</strong></p>
+        <!-- <p>"Das 2024 erschienene DIY-produzierte Debütalbum 'Weidagånga' der Rock & Blues - Dialektband sprüht trotz autobiografischer Schwere unverkennbar vor Lebensfreude und Tatendrang"</p> -->
+        <p>"HUAT ist wie ein Spätsommerabend am Grazer Lendplatz: gesellig, spritzig und voll mit erinnerungswürdigen Geschichten".</p>
+        <p><a href="https://www.volume.at/musik/interviews/bis-zur-naechsten-probe-kann-sich-alles-wieder-geaendert-haben/" target="_blank">Ganzes Interview mit Volume</a></p>
+      </div>
+    </div>
+    <div class="col-sm-6 text-center">
+      <div class="thumbnail">
+        <!-- <img src="attachments/images/IMG_7850.jpg" alt="Kleine Zeitung" width="400" height="300"> -->
+        <p><strong>Kleine Zeitung</strong></p>
+        <p>"HUAT wuchteten bluesgetränkten Oldschool Rock N Roll in den Saal"</p>
+      </div>
+    </div>
+    <div class="col-sm-6 text-center">
+      <div class="thumbnail">
+        <!-- <img src="attachments/images/IMG_7850.jpg" alt="Die Steirerin" width="400" height="300"> -->
+        <p><strong>Die Steirerin</strong></p>
+        <p>"Der Sound: Eine Mischung aus amerikanischen Bluesrock und steirischer Mundart. Nostalgische Einflüsse von Rockbands der 60er und 70er Jahre treffen auf moderne Einflüsse"</p>
+      </div>
+    </div>
+    <div class="col-sm-6 text-center">
+      <div class="thumbnail">
+        <!-- <img src="attachments/images/IMG_7850.jpg" alt="Mein Bezirk" width="400" height="300"> -->
+        <p><strong>Mein Bezirk</strong></p>
+        <p>"Das Graz eine Stadt der Bands ist, beweist auch die Band HUAT. Diese stehen für energetische Rockmusik im Gewand steirischer Mundart".</p>
+      </div>
+    </div>
+    <div class="col-sm-6 text-center">
+      <div class="thumbnail">
+        <!-- <img src="attachments/images/IMG_7850.jpg" alt="Der Grazer" width="400" height="300"> -->
+        <p><strong>Der Grazer</strong></p>
+        <p>"Die aus dem Leben gegriffenen zeitgemäßen Texte, die Liebe und Verlust auf ebenso nachfühlbare Weise thematisieren wie die Unmenschlichkeit in der Flüchtlingsdebatte und das 'Hoamgeh um 4 in da Fruah', verleihen Authentizität und gehen ins Herz."</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="downloads" class="bg-1 section">
+  <h3 class="text-center">DOWNLOADS</h3>
+  <p class="text-center"><em>Weitere Informationen. Wer's braucht.</em></p>
+  <div class="row text-center">
+    <ul class="social-list list-inline">
+      <li>
+        <a href="/documents/HUAT Pressetext 2024.pdf">
+          <button type="button" class="btn btn-lg">Press Kit</button>
+        </a>
+      </li>
+      <li>
+        <a href="/documents/huat-tech_rider.pdf">
+        <button type="button" class="btn btn-lg" >Tech Rider</button>
+        </a>
+      </li>
+      <!-- <li>
+        <a href="/documents/impressum.html">
+        <button type="button" class="btn btn-lg" >Impressum</button>
+        </a>
+      </li> -->
+    </ul>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="bg-1 section container">
+  <h3 class="text-center">KONTAKT</h3>
+  <p class="text-center"><em>Schreibt's uns!</em></p>
+  <form action="https://formspree.io/f/{your_form_id}" method="POST">
+    <!-- <form action="mailto:youngzwiebelandthegemusebeat@gmail.com" method="POST"> -->
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3 form-group">
+        <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3 form-group">
+        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3 form-group">
+        <textarea class="form-control" id="comments" name="comments" placeholder="Worum geht's?" rows="5"></textarea>
+      </div>
+    </div>
+    <br>
+    <div class="row"></div>
+      <div class="col-sm-6 col-sm-offset-3 form-group">
+        <button class="btn btn-lg" type="submit">Senden</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- Image of location/map -->
+<!-- <img src="attachments/images/IMG_7850.jpg" class="img-responsive" style="width:100%"> -->
+
+<!-- Footer -->
+<footer class="text-center bg-1 section" style="width: 100%;">
+  <!-- <br><br><br><br>
+  <a class="up-arrow text-center" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up text-center"></span>
+  </a> -->
+  <!-- <p>HUAT © 2025 <a href="http://www.huat.at">huat.at</a> | <a href="http://www.huat.at/impressum">Impressum</a></p> -->
+  <div class="row text-center">
+    <div class="col-xs-12 text-center">
+        <ul class="social-list list-inline text-center">
+            <li>
+              <h2>
+                <a href="https://open.spotify.com/intl-de/artist/6JnHFZYXW3a6QHm4a5Xnk1?si=ozsyvkhATpWXegPCHcEvbg" target="_blank"><i class="fa fa-spotify"></i></a>
+              </h2>
+            </li>
+            <li>
+              <h2>
+                <a href="https://www.instagram.com/huatband?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fa fa-instagram"></i></a>
+              </h2>
+            </li>
+            <li>
+              <h2>
+                <a href="https://www.youtube.com/channel/UCXhmD7YL2xnOCEdgxNVuGDw" target="_blank"><i class="fa fa-youtube"></i></a>
+              </h2>
+            </li>
+            <li>
+              <h2>
+              <a href="https://www.facebook.com/huatband/" target="_blank"><i class="fa fa-facebook"></i></a>
+              </h2>
+          </li>
+        </ul>
+    </div>
+
+    <p>Luca Candussi © 2025 <a href="documents/impressum.html" data-toggle="tooltip" title="Notwendigerweise">Impressum</a></p>
+
+  </div>
+</footer>
+
+<script>
+  $(document).ready(function() {
+    // Initialize Tooltip
+    $('[data-toggle="tooltip"]').tooltip(); 
+    
+    // Smooth scrolling (already in your code)
+    $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+        var hash = this.hash;
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 900, function(){
+          window.location.hash = hash;
+        });
+      }
+    });
+  
+    // *** Automatically collapse mobile navbar after clicking a menu item ***
+    $('.navbar-collapse ul li a').click(function() {
+      // If the .navbar-toggle button is currently visible, it means
+      // we are in mobile view and the nav is expanded.
+      if ($('.navbar-toggle').is(':visible')) {
+        $('.navbar-toggle').click(); // Programmatically click it to close the menu
+      }
+    });
+  });
+  </script>
+  
+
+</body>
+</html>
